@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: spacemarket-clone_production
-  username: spacemarket-clone
-  password: <%= ENV['SPACEMARKET-CLONE_DATABASE_PASSWORD'] %>
+  username: root
+  password:
