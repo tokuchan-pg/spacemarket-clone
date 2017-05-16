@@ -1,0 +1,103 @@
+#header{
+  background-color: $light-blue;
+  width: 100vw;
+  min-width: 960px;
+
+  .header-inner{
+    @include clearfix();
+    width: 960px;
+    margin: 0 auto;
+
+    &__menu_signup{
+      @include button();
+      float: right;
+    }
+
+    &__menu_signin{
+      @include button();
+      float: right;
+    }
+  }
+}
+
+
+.content{
+  background-color: $white;
+  width: 960px;
+  margin: 0 auto;
+
+  &__logo{
+    width: 381px;
+    margin: 0 auto;
+    padding: 15px 0;
+  }
+
+  &__rooms-list{
+    width: 550px;
+    margin: 0 auto;
+
+    a {
+     color: #000000;
+
+      .room{
+        margin-bottom: 18px;
+        border: 1px solid #ddd;
+        box-shadow: 1px 1px #ddd;
+
+        &__image{
+          background-color: $light-blue;
+          position: relative;
+          height: 200px;
+
+          &__price{
+            background-color: $dark-gray;
+            color: $white;
+            position: absolute;
+            top: 160px;
+            left: 15px;
+            height: 30px;
+            width: 140px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 2px;
+          }
+        }
+
+        &__info{
+          height: 60px;
+          padding: 3px 0 0 10px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+
+#footer{
+  background-color: $dark-gray;
+  width: 100vw;
+  min-width: 960px;
+
+    .footer-inner{
+    @include clearfix();
+    width: 960px;
+    margin: 0 auto;
+
+      &__logo{
+        margin: 6px 10px 3px;
+        float: left;
+      }
+
+      &__menu_signin{
+        @include button();
+        float: left;
+      }
+
+      &__menu_signup{
+        @include button();
+        float: left;
+      }
+  }
+}
