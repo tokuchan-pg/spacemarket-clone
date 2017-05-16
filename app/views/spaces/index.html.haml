@@ -1,12 +1,19 @@
 %header#header
   .header-inner
-    = link_to 'https://www.google.co.jp/' do
-      .header-inner__menu_signup
-        新規登録
-    = link_to 'https://www.google.co.jp/' do
-      .header-inner__menu_signin
-        ログイン
-
+    - if user_signed_in?
+      = link_to destroy_user_session_path, method: :delete do
+        .header-inner__menu_signout
+          ログアウト
+      = link_to edit_user_registration_path do
+        .header-inner__menu_edit
+          登録情報編集
+    - else
+      = link_to new_user_registration_path do
+        .header-inner__menu_signup
+          新規登録
+      = link_to new_user_session_path do
+        .header-inner__menu_signin
+          ログイン
 
 %section.content
   .content__logo
@@ -60,9 +67,11 @@
   .footer-inner
     .footer-inner__logo
       = image_tag 'logo_black.png'
-    = link_to 'https://www.google.co.jp/' do
-      .footer-inner__menu_signin
-        ログイン
-    = link_to 'https://www.google.co.jp/' do
-      .footer-inner__menu_signup
-        新規登録
+    - unless user_signed_in?
+      = link_to new_user_registration_path do
+        .footer-inner__menu_signup
+          新規登録
+      = link_to new_user_session_path do
+        .footer-inner__menu_signin
+          ログイン
+

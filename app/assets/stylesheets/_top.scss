@@ -8,12 +8,7 @@
     width: 960px;
     margin: 0 auto;
 
-    &__menu_signup{
-      @include button();
-      float: right;
-    }
-
-    &__menu_signin{
+    &__menu_signout, &__menu_edit, &__menu_signup, &__menu_signin{
       @include button();
       float: right;
     }
@@ -90,14 +85,9 @@
         float: left;
       }
 
-      &__menu_signin{
-        @include button();
-        float: left;
-      }
-
-      &__menu_signup{
-        @include button();
-        float: left;
-      }
+    &__menu_signup, &__menu_signin{
+      @include button();
+      float: left;
+    }
   }
 }
