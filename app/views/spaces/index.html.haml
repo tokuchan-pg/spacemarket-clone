@@ -1,0 +1,31 @@
+= render 'shared/owner_dashboard_header'
+
+%section
+  .spaces-left
+    .title
+      会場一覧
+    .space__list
+      = link_to "https://www.google.co.jp/" do
+        .space
+          .space__image
+            画像表示
+          .space__name
+            スペース名
+      = link_to "https://www.google.co.jp/" do
+        .space
+          .space__image
+            画像表示
+          .space__name
+            スペース名
+      = link_to "https://www.google.co.jp/" do
+        .space
+          .space__image
+            画像表示
+          .space__name
+            スペース名
+    .newspace
+      = link_to "https://www.google.co.jp/" do
+        .newspace-btn
+          + スペースを追加
+
+= render 'shared/owner_dashboard_footer'

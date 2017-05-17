@@ -17,3 +17,10 @@
   line-height: 30px;
   border-radius: 2px;
 }
+
+@mixin linktext_darkgray(){
+  a:link { color: $dark-gray; }
+  a:visited { color: $dark-gray; }
+  a:hover { color: $dark-gray; }
+  a:active { color: $dark-gray; }
+}
