@@ -1,0 +1,57 @@
+%header#dashboard-header
+
+  .dashboard-header-inner-top
+    .dashboard-header-inner-top-inner
+      = link_to root_path do
+        .dashboard-header-inner-top-inner__logo
+          = image_tag 'logo_white_dashboard.png'
+      = link_to edit_user_registration_path do
+        .dashboard-header-inner-top-inner__menu_edit
+          登録情報編集
+      = link_to "/owners/#{current_user.id}/dashboard" do
+        .dashboard-header-inner-top-inner__menu_dashboard
+          スペース管理
+
+  .dashboard-header-inner-bottom
+    %ul.dashboard-header-inner-bottom-inner
+      .dashboard-header-inner-bottom-inner__currentuser
+        = current_user.name
+
+      = link_to edit_user_registration_path do
+        %li.dashboard-header-inner-bottom-inner__menu
+          設定
+      = link_to "https://www.google.co.jp/" do
+        %li.dashboard-header-inner-bottom-inner__menu
+          売上明細
+      = link_to "https://www.google.co.jp/" do
+        %li.dashboard-header-inner-bottom-inner__menu
+          スペース管理
+      = link_to "https://www.google.co.jp/" do
+        %li.dashboard-header-inner-bottom-inner__menu
+          予約一覧
+      = link_to "/owners/#{current_user.id}/dashboard" do
+        %li.dashboard-header-inner-bottom-inner__menu
+          ダッシュボード
+
+%section.dashboard-content
+  .dashboard-content-inner
+    .dashboard-content-inner-inner
+      .dashboard-content__list
+        .dashboard-content__list-title
+          未承認の予約リクエスト
+        .dashboard-content__list-message
+          未承認の予約リクエストがn件あります。
+
+      .dashboard-content__list
+        .dashboard-content__list-title
+          入金待ちの予約リクエスト
+        .dashboard-content__list-message
+          入金待ちの予約リクエストがn件あります。
+
+      .dashboard-content__list
+        .dashboard-content__list-title
+          予約完了
+        .dashboard-content__list-message
+          完了した予約がn件あります。
+
+%footer#dashboard-footer

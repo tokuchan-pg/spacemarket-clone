@@ -6,4 +6,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:edit, :update]
 
+  #オーナー用ダッシュボードトップ
+  get 'owners/:user_id/dashboard'  =>  'owner_dashboards#index'
+
 end

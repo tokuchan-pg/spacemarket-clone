@@ -49,6 +49,8 @@ group :development, :test do
 
   gem 'erb2haml'
 
+  gem 'pry-rails'
+
 end
 
 group :development do

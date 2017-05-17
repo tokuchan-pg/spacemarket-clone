@@ -1,0 +1,94 @@
+// Place all the styles related to the owner_dashboards controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#dashboard-header{
+  width: 100vw;
+  min-width: 960px;
+
+  .dashboard-header-inner-top-inner{
+    @include clearfix();
+    width: 960px;
+    margin: 0 auto;
+
+    &__logo{
+      padding: 2px 0 0 12px;
+      float: left;
+    }
+
+    &__menu_edit{
+      @include button();
+      margin: 8px 8px;
+      float: right;
+    }
+
+    &__menu_dashboard{
+      @include button();
+      background-color: $yellow;
+      margin: 8px 8px;
+      float: right;
+    }
+  }
+
+  .dashboard-header-inner-bottom{
+    background-color: $light-gray;
+
+    &-inner{
+      @include clearfix();
+      width: 960px;
+      margin: 0 auto;
+      color: $white;
+
+      a:link { color: $white; }
+      a:visited { color: $white; }
+      a:hover { color: $light-green; }
+      a:active { color: $white; }
+
+      &__currentuser{
+        padding: 8px 0 8px 15px;
+        float: left;
+      }
+
+      &__menu{
+        padding: 8px 8px;
+        float: right;
+      }
+
+    }
+  }
+}
+
+.dashboard-content{
+  background-color: $super-light-gray;
+  min-width: 960px;
+
+  .dashboard-content-inner{
+    height: 300px;
+    width: 960px;
+    margin: 0 auto;
+
+    .dashboard-content-inner-inner{
+      padding: 30px 0 0 70px;
+
+      .dashboard-content__list-title{
+        padding-bottom: 10px;
+        font-size: 20px;
+        color: $dark-gray;
+      }
+
+      .dashboard-content__list-message{
+        padding-bottom: 20px;
+        font-size: 14px;
+        color: $light-gray;
+      }
+
+    }
+  }
+}
+
+#dashboard-footer{
+  background-color: $light-gray;
+  height: 40px;
+  width: 100vw;
+  min-width: 960px;
+}
+
