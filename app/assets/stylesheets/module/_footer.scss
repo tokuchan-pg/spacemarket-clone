@@ -1,0 +1,21 @@
+#footer{
+  background-color: $dark-gray;
+  width: 100vw;
+  min-width: 960px;
+
+    .footer-inner{
+    @include clearfix();
+    width: 960px;
+    margin: 0 auto;
+
+      &__logo{
+        margin: 6px 10px 3px;
+        float: left;
+      }
+
+    &__menu_signup, &__menu_signin{
+      @include button();
+      float: left;
+    }
+  }
+}

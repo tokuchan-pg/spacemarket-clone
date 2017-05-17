@@ -1,0 +1,20 @@
+%header#header
+  .header-inner
+    - if user_signed_in?
+      = link_to destroy_user_session_path, method: :delete do
+        .header-inner__menu_signout
+          ログアウト
+      = link_to edit_user_registration_path do
+        .header-inner__menu_edit
+          登録情報編集
+      - if current_user.usertype == 1
+        = link_to edit_user_path(current_user) do
+          .header-inner__menu_hostregister
+            ホスト登録
+    - else
+      = link_to new_user_registration_path do
+        .header-inner__menu_signup
+          新規登録
+      = link_to new_user_session_path do
+        .header-inner__menu_signin
+          ログイン
