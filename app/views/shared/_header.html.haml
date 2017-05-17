@@ -11,6 +11,10 @@
         = link_to edit_user_path(current_user) do
           .header-inner__menu_hostregister
             ホスト登録
+      - else
+        = link_to "/owners/#{current_user.id}/dashboard" do
+          .header-inner__menu_hostregister
+            スペース管理
     - else
       = link_to new_user_registration_path do
         .header-inner__menu_signup
