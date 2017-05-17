@@ -1,0 +1,23 @@
+.content__hostregister{
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &__button__inner{
+    @include clearfix();
+    width: 250px;
+    margin: 0 auto;
+
+    .yes{
+      @include button();
+      float: left;
+    }
+
+    .no{
+      @include button();
+      background-color: $light-blue;
+      float: right;
+    }
+
+  }
+}

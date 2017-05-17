@@ -1,0 +1,21 @@
+= render 'shared/header'
+
+%section.content
+  .content__logo
+    = image_tag 'logo_white.png'
+
+  .content__hostregister
+    .content__hostregister__confirm
+      ホストとしても登録しますか？
+      %br
+      ホスト登録も行うと、スペースを貸し出せるようになります。
+    .content__hostregister__button
+      .content__hostregister__button__inner
+        = link_to user_path, method: :patch do
+          .yes
+            はい
+        = link_to root_path do
+          .no
+            いいえ
+
+= render 'shared/footer'

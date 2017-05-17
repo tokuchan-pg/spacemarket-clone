@@ -1,0 +1,22 @@
+#header{
+  background-color: $light-blue;
+  width: 100vw;
+  min-width: 960px;
+
+  .header-inner{
+    @include clearfix();
+    width: 960px;
+    margin: 0 auto;
+
+    &__menu_signout, &__menu_edit, &__menu_signup, &__menu_signin{
+      @include button();
+      float: right;
+    }
+
+    &__menu_hostregister{
+      @include button();
+      background-color: $yellow;
+      float: right;
+    }
+  }
+}

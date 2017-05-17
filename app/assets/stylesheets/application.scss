@@ -3,5 +3,8 @@
 @import "./mixin/mixin";
 @import "./config/variable";
 
-@import "./top";
-@import "./user";
+@import "./module/top_main";
+@import "./module/header";
+@import "./module/footer";
+@import "./module/user";
+@import "./module/host_register";

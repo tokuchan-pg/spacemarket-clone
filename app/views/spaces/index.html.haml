@@ -1,23 +1,9 @@
-%header#header
-  .header-inner
-    - if user_signed_in?
-      = link_to destroy_user_session_path, method: :delete do
-        .header-inner__menu_signout
-          ログアウト
-      = link_to edit_user_registration_path do
-        .header-inner__menu_edit
-          登録情報編集
-    - else
-      = link_to new_user_registration_path do
-        .header-inner__menu_signup
-          新規登録
-      = link_to new_user_session_path do
-        .header-inner__menu_signin
-          ログイン
+= render 'shared/header'
 
 %section.content
   .content__logo
     = image_tag 'logo_white.png'
+
   .content__rooms-list
 
     = link_to 'https://www.google.co.jp/' do
@@ -62,16 +48,4 @@
           .room__info__city
             東京都渋谷区
 
-
-%footer#footer
-  .footer-inner
-    .footer-inner__logo
-      = image_tag 'logo_black.png'
-    - unless user_signed_in?
-      = link_to new_user_registration_path do
-        .footer-inner__menu_signup
-          新規登録
-      = link_to new_user_session_path do
-        .footer-inner__menu_signin
-          ログイン
-
+= render 'shared/footer'
