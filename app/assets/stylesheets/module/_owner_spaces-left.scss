@@ -1,0 +1,61 @@
+.spaces-left{
+  height: calc(100vh - 126px);
+  width: 235px;
+  border-right: 1px solid $super-light-gray;
+
+  @include linktext_darkgray();
+  overflow-y: scroll;
+
+  .title{
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    color: $dark-gray;
+    border-bottom: 1px solid $super-light-gray;
+  }
+
+  .space{
+    @include clearfix();
+    height: 120px;
+    border-bottom: 1px solid $super-light-gray;
+
+    .space__image{
+      background-color: $light-gray;
+      height: 100px;
+      width: 100px;
+      margin: 10px 5px 0 10px;
+      float: left;
+    }
+
+    .space__name{
+      height: 100px;
+      width: 100px;
+      margin: 10px 10px 0 10px;
+      float: left;
+    }
+
+  }
+
+  .newspace{
+    height: 80px;
+    position: relative;
+    border-bottom: 1px solid $super-light-gray;
+
+    .newspace-btn{
+      background-color: $light-gray;
+      height: 60px;
+      width: 215px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      text-align: center;
+      line-height: 60px;
+      color: $white;
+      border-radius: 2px;
+    }
+  }
+
+}

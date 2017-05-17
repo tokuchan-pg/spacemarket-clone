@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   #オーナー用ダッシュボードトップ
   get 'owners/:user_id/dashboard'  =>  'owner_dashboards#index'
 
+  #オーナー用ダッシュボード space一覧画面
+  get 'owners/:user_id/dashboard/spaces'  =>  'spaces#index'
+
 end
