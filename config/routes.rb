@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
   root 'spaces#index'
 
+  resources :users, only: [:edit, :update]
+
 end
